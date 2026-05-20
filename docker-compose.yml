@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: ./FinanceTracker
+      dockerfile: Dockerfile
+    container_name: financetracker_app
+    ports:
+      - "8080:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/finance.db
+    volumes:
+      - sqlite_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:

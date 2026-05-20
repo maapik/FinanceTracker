@@ -1,0 +1,227 @@
+﻿@page "/"
+@using FinanceTracker.Models
+@using FinanceTracker.Services
+@inject FinanceService FinanceService
+
+<PageTitle>Мои финансы</PageTitle>
+
+@if (accounts == null)
+{
+    <p>Загрузка...</p>
+}
+else
+{
+    <div class="d-flex justify-content-between align-items-center bg-dark text-white p-4 mb-4 rounded shadow">
+        <div>
+            <h2 class="m-0 fw-bold">Финансовая сводка</h2>
+            <small class="text-light opacity-75">@currentTime</small>
+        </div>
+        <div class="text-end">
+            <h6 class="m-0 text-uppercase opacity-75">Общий капитал</h6>
+            <h1 class="@(TotalBalance >= 0 ? "text-success" : "text-danger") m-0 fw-bold">
+                @TotalBalance.ToString("C0", new System.Globalization.CultureInfo("ru-RU"))
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            @if (accounts.Any())
+            {
+                <div class="card p-3 mb-4 shadow-sm border-0 bg-light">
+                    <h5 class="text-primary fw-bold mb-3">Добавить операцию</h5>
+                    <EditForm Model="newTransaction" OnValidSubmit="SaveTransaction">
+                        <div class="mb-2">
+                            <label class="form-label fw-bold text-secondary">Сумма (₽):</label>
+                            <InputNumber @bind-Value="newTransaction.Amount" class="form-control form-control-lg" />
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label fw-bold text-secondary">Счет:</label>
+                            <InputSelect TValue="int" @bind-Value="newTransaction.AccountId" class="form-select">
+                                @foreach (var acc in accounts)
+                                {
+                                    <option value="@acc.Id">@acc.Name</option>
+                                }
+                            </InputSelect>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <label class="form-label fw-bold text-secondary">Тип:</label>
+                                <InputSelect @bind-Value="newTransaction.Type" class="form-select">
+                                    <option value="Expense">Расход</option>
+                                    <option value="Income">Доход</option>
+                                </InputSelect>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label fw-bold text-secondary">Категория:</label>
+                                <InputText @bind-Value="newTransaction.CategoryName" class="form-control" placeholder="Еда, Такси..." />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-secondary">Описание:</label>
+                            <InputText @bind-Value="newTransaction.Description" class="form-control" placeholder="Комментарий" />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 fw-bold shadow-sm">Сохранить</button>
+                    </EditForm>
+                </div>
+            }
+
+            <div class="card p-3 mb-4 shadow-sm border-0">
+                <h6 class="text-secondary fw-bold mb-3">Создать новый счет</h6>
+                <EditForm Model="newAccount" OnValidSubmit="SaveAccount">
+                    <div class="mb-2">
+                        <InputText @bind-Value="newAccount.Name" class="form-control" placeholder="Название (напр. Наличные)" />
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark w-100 fw-bold btn-sm">Создать счет</button>
+                </EditForm>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h5 class="text-secondary fw-bold mb-3">Мои счета</h5>
+            <div class="row mb-4">
+                @foreach (var acc in accounts)
+                {
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm border-0 border-start border-5 @(acc.Balance >= 0 ? "border-success" : "border-danger")">
+                            <div class="card-body py-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    @if (editingAccountId == acc.Id)
+                                    {
+                                        <input type="text" class="form-control form-control-sm mb-1" @bind="editingAccountName" />
+                                        <button class="btn btn-success btn-sm py-0 px-2" @onclick="() => RenameAccount(acc)">ОК</button>
+                                        <button class="btn btn-light btn-sm py-0 px-2 text-muted" @onclick="CancelEditing">Отмена</button>
+                                    }
+                                    else
+                                    {
+                                        <h6 class="card-title text-muted fw-bold mb-1">@acc.Name</h6>
+                                        <h3 class="card-text @(acc.Balance >= 0 ? "text-success" : "text-danger") m-0 fw-bold">
+                                            @acc.Balance.ToString("C0", new System.Globalization.CultureInfo("ru-RU"))
+                                        </h3>
+                                    }
+                                </div>
+                                @if (editingAccountId != acc.Id)
+                                {
+                                    <div>
+                                        <button class="btn btn-link btn-sm text-primary p-1" @onclick="() => StartEditing(acc)">Изм.</button>
+                                        <button class="btn btn-link btn-sm text-danger p-1" @onclick="() => DeleteAccount(acc.Id)">Уд.</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <h5 class="text-secondary fw-bold mb-3">История операций</h5>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-hover align-middle mb-0 bg-white">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Дата</th>
+                            <th>Сумма</th>
+                            <th>Категория</th>
+                            <th>Счет</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (!transactions.Any())
+                        {
+                            <tr>
+                                <td colspan="5" class="text-center text-muted py-3">История операций пуста</td>
+                            </tr>
+                        }
+                        @foreach (var t in transactions)
+                        {
+                            <tr>
+                                <td><small class="text-muted fw-bold">@t.Date.ToString("dd.MM.yyyy HH:mm")</small></td>
+                                <td class="fw-bold @(t.Type == "Income" ? "text-success" : "text-danger")">
+                                    @(t.Type == "Income" ? "+" : "-")@t.Amount.ToString("C0", new System.Globalization.CultureInfo("ru-RU"))
+                                </td>
+                                <td><span class="badge bg-secondary">@(string.IsNullOrEmpty(t.CategoryName) ? "Без категории" : t.CategoryName)</span></td>
+                                <td><small class="text-muted fw-bold">@t.Account?.Name</small></td>
+                                <td>@t.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<Account> accounts;
+    private List<Transaction> transactions;
+
+    private Transaction newTransaction = new Transaction();
+    private Account newAccount = new Account();
+
+    private int editingAccountId = 0;
+    private string editingAccountName = string.Empty;
+
+    private string currentTime = DateTime.Now.ToString("dd MMMM yyyy, HH:mm", new System.Globalization.CultureInfo("ru-RU"));
+    private decimal TotalBalance => accounts?.Sum(a => a.Balance) ?? 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await FinanceService.SeedDefaultDataAsync();
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        accounts = await FinanceService.GetAccountsAsync();
+        transactions = await FinanceService.GetTransactionsAsync();
+
+        if (accounts.Any()) newTransaction.AccountId = accounts.First().Id;
+    }
+
+    private async Task SaveTransaction()
+    {
+        if (newTransaction.Amount <= 0) return;
+        await FinanceService.AddTransactionAsync(newTransaction);
+        newTransaction = new Transaction
+        {
+            AccountId = accounts.Any() ? accounts.First().Id : 0,
+            Type = "Expense"
+        };
+        await LoadData();
+    }
+
+    private async Task SaveAccount()
+    {
+        if (string.IsNullOrWhiteSpace(newAccount.Name)) return;
+        await FinanceService.AddAccountAsync(newAccount);
+        newAccount = new Account();
+        await LoadData();
+    }
+
+    private void StartEditing(Account acc)
+    {
+        editingAccountId = acc.Id;
+        editingAccountName = acc.Name;
+    }
+
+    private void CancelEditing()
+    {
+        editingAccountId = 0;
+        editingAccountName = string.Empty;
+    }
+
+    private async Task RenameAccount(Account acc)
+    {
+        if (string.IsNullOrWhiteSpace(editingAccountName)) return;
+        acc.Name = editingAccountName;
+        await FinanceService.UpdateAccountAsync(acc);
+        editingAccountId = 0;
+        await LoadData();
+    }
+
+    private async Task DeleteAccount(int id)
+    {
+        await FinanceService.DeleteAccountAsync(id);
+        await LoadData();
+    }
+}
