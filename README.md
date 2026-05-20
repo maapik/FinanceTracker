@@ -28,13 +28,12 @@
    git clone https://github.com/maapik/FinanceTracker.git
 
 2. Перейдите в директорию с проектом:
-
 cd FinanceTracker
 
 3.Запустите сборку и старт контейнеров:
-
+```bash
 docker-compose up -d --build
+```
 
 4. Откройте веб-браузер и перейдите по адресу:
-
 http://localhost:8080
