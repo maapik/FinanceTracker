@@ -25,7 +25,7 @@
 
 1. Склонируйте репозиторий на свой компьютер:
    ```bash
-   git clone [https://github.com/maapik/FinanceTracker.git](https://github.com/maapik/FinanceTracker.git)
+   git clone https://github.com/maapik/FinanceTracker.git
 
 2. Перейдите в директорию с проектом:
 
