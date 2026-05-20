@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\layout\\reconnectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\layout\\reconnectmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\financetracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -37,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\services\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\services\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|solutionrelative:financetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{035291ED-96CE-D287-A03B-DBA1759FE681}|FinanceTracker\\FinanceTracker.csproj|c:\\users\\nikita\\source\\repos\\financetracker\\financetracker\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,37 +74,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReconnectModal.razor",
-              "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
-              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
-              "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
-              "RelativeToolTip": "FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T11:42:43.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\App.razor",
               "RelativeDocumentMoniker": "FinanceTracker\\Components\\App.razor",
               "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\App.razor",
               "RelativeToolTip": "FinanceTracker\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T11:40:07.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T11:40:07.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FinanceTracker.csproj",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\FinanceTracker.csproj",
               "RelativeDocumentMoniker": "FinanceTracker\\FinanceTracker.csproj",
@@ -108,12 +98,11 @@
               "RelativeToolTip": "FinanceTracker\\FinanceTracker.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-20T11:11:19.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T11:11:19.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": ".dockerignore",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\.dockerignore",
               "RelativeDocumentMoniker": "FinanceTracker\\.dockerignore",
@@ -125,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "20260520110439_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Migrations\\20260520110439_InitialCreate.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Migrations\\20260520110439_InitialCreate.cs",
@@ -137,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "FinanceService.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Services\\FinanceService.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Services\\FinanceService.cs",
@@ -149,7 +138,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T10:40:15.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReconnectModal.razor",
+              "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
+              "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Layout\\ReconnectModal.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T11:42:43.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "20260520103706_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Migrations\\20260520103706_InitialCreate.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Migrations\\20260520103706_InitialCreate.cs",
@@ -161,19 +175,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "FinanceTracker\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAUwOIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "FinanceTracker\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Routes.razor",
+              "RelativeToolTip": "FinanceTracker\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T10:40:15.627Z"
+              "WhenOpened": "2026-05-20T12:01:57.346Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Program.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Program.cs",
@@ -181,12 +195,11 @@
               "RelativeToolTip": "FinanceTracker\\Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:35:42.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T10:35:42.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Dockerfile",
               "RelativeDocumentMoniker": "FinanceTracker\\Dockerfile",
@@ -198,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "FinanceTracker\\Components\\Layout\\NavMenu.razor",
@@ -210,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\appsettings.json",
               "RelativeDocumentMoniker": "FinanceTracker\\appsettings.json",
@@ -222,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Data\\AppDbContext.cs",
@@ -234,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Transaction.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Transaction.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Models\\Transaction.cs",
@@ -246,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\nikita\\source\\repos\\FinanceTracker\\FinanceTracker\\Models\\Account.cs",
               "RelativeDocumentMoniker": "FinanceTracker\\Models\\Account.cs",

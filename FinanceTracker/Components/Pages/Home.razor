@@ -1,4 +1,5 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 @using FinanceTracker.Models
 @using FinanceTracker.Services
 @inject FinanceService FinanceService
@@ -30,7 +31,7 @@ else
             {
                 <div class="card p-3 mb-4 shadow-sm border-0 bg-light">
                     <h5 class="text-primary fw-bold mb-3">Добавить операцию</h5>
-                    <EditForm Model="newTransaction" OnValidSubmit="SaveTransaction">
+                    <EditForm Model="newTransaction" OnValidSubmit="SaveTransaction" FormName="AddTransactionForm">
                         <div class="mb-2">
                             <label class="form-label fw-bold text-secondary">Сумма (₽):</label>
                             <InputNumber @bind-Value="newTransaction.Amount" class="form-control form-control-lg" />
@@ -68,7 +69,7 @@ else
 
             <div class="card p-3 mb-4 shadow-sm border-0">
                 <h6 class="text-secondary fw-bold mb-3">Создать новый счет</h6>
-                <EditForm Model="newAccount" OnValidSubmit="SaveAccount">
+                <EditForm Model="newAccount" OnValidSubmit="SaveAccount" FormName="AddAccountForm">
                     <div class="mb-2">
                         <InputText @bind-Value="newAccount.Name" class="form-control" placeholder="Название (напр. Наличные)" />
                     </div>
