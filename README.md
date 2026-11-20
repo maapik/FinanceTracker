@@ -1,11 +1,11 @@
 # FinanceTracker
 
 <p>
-  <img src="https://img.shields.io/badge/C%23-.NET_8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET 8" />
-  <img src="https://img.shields.io/badge/Blazor-Interactive_Server-512BD4?style=for-the-badge&logo=blazor&logoColor=white" alt="Blazor Server" />
-  <img src="https://img.shields.io/badge/EF_Core-8.0-10b981?style=for-the-badge" alt="EF Core 8" />
-  <img src="https://img.shields.io/badge/SQLite-Persistent_Volume-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/C%23-.NET_8-27272a?style=for-the-badge&logo=dotnet&logoColor=d4d4d8&labelColor=090a0c" alt=".NET 8" />
+  <img src="https://img.shields.io/badge/Blazor-Interactive_Server-1f2228?style=for-the-badge&logo=blazor&logoColor=d4d4d8&labelColor=090a0c" alt="Blazor Server" />
+  <img src="https://img.shields.io/badge/EF_Core-8.0-27272a?style=for-the-badge&labelColor=090a0c" alt="EF Core 8" />
+  <img src="https://img.shields.io/badge/SQLite-Persistent_Volume-1f2228?style=for-the-badge&logo=sqlite&logoColor=d4d4d8&labelColor=090a0c" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Docker-Compose-27272a?style=for-the-badge&logo=docker&logoColor=d4d4d8&labelColor=090a0c" alt="Docker" />
 </p>
 
 Веб-приложение для учёта личных финансов и контроля бюджета, построенное на **ASP.NET Core (.NET 8) Blazor Server** с использованием **Entity Framework Core**, **SQLite** и контейнеризации **Docker**.
