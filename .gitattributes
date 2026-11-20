@@ -1,0 +1,6 @@
+**/wwwroot/lib/** linguist-vendored
+*.min.css linguist-vendored
+*.min.js linguist-vendored
+*.css.map linguist-vendored
+*.js.map linguist-vendored
+*.razor linguist-language=C#
